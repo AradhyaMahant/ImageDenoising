@@ -22,11 +22,11 @@ def main():
         models()
     if selected_box=='view source code':
         readme_text.empty()
-        st.code(get_file_content_as_string("app.py"))
+        st.code(get_file_content_as_string("Webapp.py"))
      
 @st.cache(show_spinner=False)
 def get_file_content_as_string(path):
-    url = 'https://raw.githubusercontent.com/sunilbelde/Imagedenoising-dncnn-keras/master/' + path
+    url = 'https://raw.githubusercontent.com/AradhyaMahant/ImageDenoising/master/' + path
     response = urllib.request.urlopen(url)
     return response.read().decode("utf-8")
 
@@ -84,7 +84,7 @@ def prediction_ui(gt):
     if noise_level!=0:
       st.success('PSNR of Noisy image : %.3f db'%PSNR(ground_truth,noisy_image))
       
-    model = st.sidebar.write("Model used to predict:- ",('DNCNN'))
+    st.sidebar.write("Model used to predict:- ",('DNCNN'))
     
     
     submit = st.sidebar.button('Predict Now')
