@@ -8,7 +8,7 @@
 
 ## Solution :
 
-1) Using DNCNN model :
+Using DNCNN model :
 
 Therea are many deep learning model that can be used for completing this task of image denoising. Now we will use Deep Convulutional Neural Network model (DnCNN)
 
@@ -22,18 +22,6 @@ Given a noisy image 'y' the model will predict residual image 'R' and clean imag
 x=y-R
 
 Research paper : https://arxiv.org/pdf/1608.03981v1.pdf
-
-2) Using RIDNET model :
-
-Real Image Denoising with Feature Attention.
-
-Architecture of the model:
-
-![Architecture_ridnet](https://user-images.githubusercontent.com/47601858/115831886-cde9c580-a42f-11eb-9b9a-b7378c054fa8.JPG)
-
-Thsi model is composed of three main modules i.e. feature extraction, feature learning residual on the residual module, and reconstruction, as shown in Figure .
-
-Research paper : https://arxiv.org/pdf/1904.07396.pdf
 
 
 ## Dataset: 
@@ -50,7 +38,7 @@ Now we create 85600 patches of size 40 x 40 that was created from 400 train imag
 ## Training:
 
 Model has been train for 30 epochs with Adam optimizer of learning rate=0.001 and with learning rate decay of 5% per epoch
-.Mean Squared Error is used as loss function for DNCNN model and Mean Absolute Error for RIDNET.
+.Mean Squared Error is used as loss function for DNCNN model.
 
 ## Results :
 
